@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="contenedor-web">
+      <!-- *****************************************************
+    *******************  HEADER CON NAV **********************
+    ****************************************************** -->
+      <div class="contenido">
+        <header>
+          <h1>Generador de memes</h1>
+          <nav>
+            <ul>
+              <li id="btn-imagen">
+                <i class="fa-regular fa-file-image"></i> Imagen
+              </li>
+              <li id="btn-texto"><i class="fa-solid fa-font"></i> Texto</li>
+              <li id="btn-modo-oscuro">
+                <i class="fa-regular fa-lightbulb"></i> Modo oscuro
+              </li>
+            </ul>
+          </nav>
+        </header>
+
+        <!-- **************************************************
+      ****************** SECTION  ***************************
+      ****************************************************-->
+        <section>
+          <div class="contenedor-de-section">
+            <p id="meme-img"></p>
+            <div id="imagen-de-meme"></div>
+            <p id="meme-img2"></p>
+          </div>
+        </section>
+
+        <!-- ******************************************
+      *********** BOTON DE DESCARGA *****************
+      ******************************************* -->
+        <div class="boton-de-descargar">
+          <p class="p-de-descarga">
+            <i class="fa-solid fa-download"></i> Descargar meme
+          </p>
+        </div>
+      </div>
+
+      <!-- **********************************************
+    ******************** ASIDE ************************
+    *********************************************** -->
+      <aside id="texto" class="aside-texto">
+        <div class="contenedor-de-aside">
+          <a class="cancelar" href="#">x</a>
+          <h2>TEXTO</h2>
+
+          <div class="control">
+            <label for="superior"><h4>SUPERIOR</h4></label>
+            <input id="superior" type="text" />
+            <div>
+              <input type="checkbox" name="" id="sin-texto-superior" />
+              <label for="sin-texto-superior">Sin texto Superior</label>
+            </div>
+          </div>
+
+          <div class="control">
+            <label for="inferior"><h4>INFERIOR</h4></label>
+            <input id="inferior" type="text" />
+            <div>
+              <input type="checkbox" name="" id="sin-texto-inferior" />
+              <label for="sin-texto-inferior">Sin texto inferior</label>
+            </div>
+          </div>
+
+          <div class="control">
+            <h4>FUENTE</h4>
+            <input id="fuente" type="text" />
+            <div>
+              <input id="font-size" type="text" />
+              <!-- cambiar a botones -->
+              <input id="izquierda" type="text" />
+              <input id="centro" type="text" />
+              <input type="text" name="" id="derecha">
+            </div>
+          </div>
+
+          <div class="control">
+            <div class="contenedor-de-control">
+              <div class="contenedor-color-texto">
+                <h4>COLOR</h4>
+                <input type="text" name="" id="color" />
+              </div>
+              <div class="contenedor-fondo-texto">
+                <h4>FONDO</h4>
+                <input type="text" name="" id="fondo-texto" />
+              </div>
+            </div>
+            <div>
+              <input type="checkbox" name="" id="sin-fondo">
+              <label for="sin-fondo">Fondo transparente</label>
+            </div>
+          </div>
+
+          <div class="control">
+            <h4>CONTORNO</h4>
+            <div>
+              <!-- cambiar a botones -->
+              <input type="text" name="" id="ninguno" />
+              <input type="text" id="claro"/>
+              <input type="text" name="" id="oscuro" />
+            </div>
+          </div>
+
+          <div class="control">
+            <label for=""><h4>ESPACIDAD</h4></label>
+            <input type="text" name="" id="" />
+          </div>
+
+          <div class="control">
+            <label for=""><h4>INTERLINEADO</h4></label>
+            <input type="text" />
+          </div>
+        </div>
+      </aside>
+      <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- ASIDE DE IMAGEN -->
+      <aside id="imagen-aside" class="aside-imagen">
+        <div class="contenedor-aside-imagen">
+          <a class="cancelar" href="#">X</a>
+          <h2>IMAGEN</h2>
+
+          <div class="control">
+            <label for="url">URL</label>
+            <input id="url" type="text" />
+          </div>
+
+          <div class="control">
+            <label for="fondo">FONDO</label>
+            <div class="contenedor-input-fondo">
+              <input id="fondo" type="text" />
+              <input type="text" name="" id="fondo2" />
+            </div>
+          </div>
+
+          <div class="control">
+            <h4>FILTROS</h4>
+            <label for="brillo">BRILLO</label>
+            <input type="range" name="" id="brillo" min="0" max="1" />
+          </div>
+
+          <div class="control">
+            <label for="opacidad">OPACIDAD</label>
+            <input type="range" name="" id="opacidad" min="0" max="1" />
+          </div>
+
+          <div class="control">
+            <label for="contraste">CONTRASTE</label>
+            <input type="range" name="" id="contraste" min="100" max="1000" />
+          </div>
+
+          <div class="control">
+            <label for="desenfoque">DESENFOQUE</label>
+            <input type="range" name="" id="desenfoque" min="0" max="10" />
+          </div>
+
+          <div class="control">
+            <label for="grises">ESCALA DE GRISES</label>
+            <input type="range" name="" id="grises" min="0" max="100" />
+          </div>
+
+          <div class="control">
+            <label for="sepia">SEPIA</label>
+            <input type="range" name="" id="sepia" min="0" max="100" />
+          </div>
+
+          <div class="control">
+            <label for="hue">HUE</label>
+            <input type="range" name="" id="hue" min="0" max="359" />
+          </div>
+
+          <div class="control">
+            <label for="saturno">SATURNO</label>
+            <input type="range" name="" id="saturno" min="100" max="1000" />
+          </div>
+
+          <div class="control">
+            <label for="negativo">NEGATIVO</label>
+            <input type="range" name="" id="negativo" min="0" max="1" />
+          </div>
+          <div class="boton-restablecer">Reestablecer filtros</div>
+        </div>
+      </aside>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
