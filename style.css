@@ -11,25 +11,25 @@ body{
 .contenedor-web{
     display: flex;
     flex-direction: row-reverse;
-    background-color: rgb(45, 41, 41);
-    color: white;
-    height: 100vh;
+    background-color: rgb(237, 235, 235);
+    color: rgb(44, 44, 44);
+    height: 110vh;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
 }
 
-.contenido{
+.contenido-nav-section{
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-/************************************************
-*************** HEADER CON NAV ******************
-********************************************** */
-
+/*************************************************************
+*********************** HEADER CON NAV ***********************
+*************************************************************/
 header{
-    background-color: rgb(16, 16, 37);
-    padding: 1%;
+    box-shadow: 0px 0px 10px 0px rgba(32, 32, 32, 0.237);
+    padding: 0.5%;
+    background-color: rgb(222, 222, 222);
     text-align: center;
 }
 
@@ -38,7 +38,7 @@ nav{
 }
 
 h1{
-    font-size: 2.5em;
+    font-size: 2.4em;
 }
 
 ul {
@@ -59,7 +59,7 @@ li{
 }
 
 li:hover{
-    background-color:rgb(128, 128, 141);
+    background-color:rgb(152, 152, 163);
 }
 
 /* ***********************************************
@@ -69,7 +69,7 @@ li:hover{
 section{
     width: 100%;
     height: 600px;
-    margin-top: 1.5%;
+    margin-top: 1%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,54 +82,62 @@ section{
     background-color: black;
 }
 
-#meme-img , #meme-img2{
+#div-img{
+    height: 400px;
+    background-color: black;
+}
+
+#text-meme , #text2-meme{
     height: 100px;
     width: 100%;
-    max-width: 540px;
-    padding: 5%;
     background-color:white;
     color: black;
     font-size: 50px;
     text-align: center;
-    overflow: auto;
+}
+
+img{
+height: 100%;
+width: 100%;
 }
 
 /* **************************************
 ********* BOTON DE DESCARGA ************
 ************************************** */
-.boton-de-descargar{
+.btn-descarga{
     width: 100%;
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-top: 1%;
+    margin-top: 0.5%;
+    color: white;
 }
 
-.p-de-descarga{
+.contenedor-descarga{
     max-width: 200px;
     padding: 10px;
     background-color: rgb(2, 96, 2);
 }
 
-.p-de-descarga:hover{
-    background-color: rgb(3, 82, 3);
+.contenedor-descarga:hover{
+    background-color: rgb(4, 82, 3);
 }
 
 /******************************************
 ***************** ASIDE *******************
 ******************************************/
-/* #texto{
-    display: none;
-} */
 
-.aside-texto, .aside-imagen{
+/* -----------------------------
+        ASIDE DE TEXTO
+------------------------------*/
+.aside-text, .aside-img{
     max-width: 280px ;
     height:100vh;
-    background-color: rgb(20, 20, 50);
+    background-color: rgb(230, 230, 230);
     position: fixed;
 }
 
-.contenedor-de-aside, .contenedor-aside-imagen{
+.contenedor-asideText, .contenedor-asideImg{
     width: 100%;
     max-width: 280px;
     padding: 4%;
@@ -144,122 +152,187 @@ section{
     text-align:center;
 }
 
-h2{
+h3{
     text-align: center;
 }
 
-/* INPUT DE FUENTE */
-
-#izquierda, #centro, #derecha{
-    width: 15%;
+.panel-de-control{
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    max-width: 250px;
 }
 
-#font-size{
-    width: 27%;
+label{
+    font-size: 14px;
+    font-weight: 900;
 }
 
 input{
     height: 20px;
     margin-top: 1%;
     padding: 2%;
-
+    font-size: 18px;
+    outline: 0.2px ;
 }
 
-
-/* color y fondo */
-
-.contenedor-de-control{
-    display:flex
+span{
+    font-size: 16px;
+    font-weight: 900;
 }
 
-#color, #fondo-texto{
-    width: 90%;
+/*** FUENTES ***/
+.align{
+    width: 21%;
+    height: 32px;
+    font-size: 16px;
+    background-color: white;
+    border: 1px solid rgb(107, 107, 107);
 }
 
- .contenedor-fondo-texto{
-    margin-left: 2% ;
-}
-
-/* CONTORNO */
-
-#ninguno, #claro, #oscuro{
+#font-size{
     width: 26%;
 }
 
-
-/* --------------------------------------------------------------------------------------------------------------------------- */
-                                            /* ASIDE DE IMAGEN  */
-
-
-#imagen-aside{
-display: none;
+select{
+    padding: 1%;
+    font-size: 18px;
+    background-color: white;
+    background-color: transparent;
+    border: 0;
 }
+
+option{
+    padding: 1%;
+    background-color: white;
+    font-size: 16px;
+}
+
+/*** COLOR Y FONDO ***/
+.contenedor-de-control{
+    display:flex;
+}
+
+.contenedor-fondo-texto{
+    margin-left: 2% ;
+}
+.contenedor-fondo-text, .contenedor-color-text{
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-fondo-texto{
+    display: flex;
+    background-color: white;
+    align-items: center;
+    margin-left: 5%;
+}
+
+.input-color{
+    width: 25px;
+    height: 25px; 
+    background-color: transparent;
+    border: 0; 
+    font-size: 16px;
+}
+
+/*** CONTORNO ***/
+.contorno{
+    width: 32%;
+    padding: 1%;
+    height: 40px;
+    font-weight: 900;
+    color: rgb(60, 60, 60);
+    background-color: white;
+    border: 1px solid rgb(107, 107, 107);
+}
+
+/* -------------------------------------------------- 
+                   ASIDE DE IMAGEN  
+---------------------------------------------------*/
 
 h4{
     margin-bottom: 2%;
+    font-size: 16px;
 }
 
-.control{
-    margin-top: 1%;
+/*** FONDO ***/
+.div-de-fondo{
+    background-color: white;
     display: flex;
-    flex-direction: column;
-    padding: 2%;
-    max-width: 250px;
-}
-
-#url, #fondo, #fondo2{
-    height: 20px ;
-    padding: 2%;
-    font-size: 18px;
-    color: white;
-    background-color: rgb(108, 107, 120);
-}
-
-#fondo, #fondo2{
+    border: 0.1px solid rgb(107, 107, 107);
+    padding: 1%;
+    font-weight: 900;
+    justify-content: center;
+    align-items: center;
     width: 50%;
     margin: 1%;
 }
 
-.contenedor-input-fondo{
+.div-input-fondo{
     display: flex;
 }
 
-.boton-restablecer{
-    background-color: rgb(70, 69, 89);
+/*** FILTROS ***/
+.filtro{
+    padding: 0;
+}
+
+.boton-reestablecer{
+    background-color: rgb(80, 79, 99);
+    color: white;
     padding: 2%;
     margin: 2%;
     width: 150px;
     text-align: center;
 }
 
-
-
-
-
-
-
-
-
-
-
+.boton-reestablecer:hover{
+    background-color: rgb(100, 99, 119);
+}
 /* **********************************************
-**************** MODO CLARO ********************* 
+**************** MODO OSCURO ********************* 
 ************************************************/
-/* 
-.contenedor-web-white{
+
+/* contenedor-web */
+.web-black{
+    background-color: rgb(45, 41, 41);
+    color: white;
+}
+
+/* header */
+.header-black{
+    background-color: rgb(16, 16, 37);
+}
+
+/* aside */
+.aside-black{
+    background-color: rgb(20, 20, 50);
+}
+
+/* fuente-text, aside de texto */
+.fuente-text{
+    color: black;
     background-color: white;
+}
+
+.span-black{
     color: black;
 }
 
-.header-white{
-    background-color: gray;
+/*****************************************************
+*************** RESPOSIVE DE 400 PX ******************
+*****************************************************/
+
+@media(min-width:400px){
+    
 }
 
-.aside-white{
-    background-color: rgb(103, 103, 167);
-} */
 
-/* ------------------------------------------------------------------------------------------------ */
+
+
 
 
 

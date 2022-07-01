@@ -12,14 +12,15 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Edictor de memes</title>
   </head>
   <body>
-    <div class="contenedor-web">
+
+    <div class="contenedor-web" id="contenedor-web">
       <!-- *****************************************************
     *******************  HEADER CON NAV **********************
     ****************************************************** -->
-      <div class="contenido">
+      <div class="contenido-nav-section">
         <header>
           <h1>Generador de memes</h1>
           <nav>
@@ -28,7 +29,7 @@
                 <i class="fa-regular fa-file-image"></i> Imagen
               </li>
               <li id="btn-texto"><i class="fa-solid fa-font"></i> Texto</li>
-              <li id="btn-modo-oscuro">
+              <li id="btn-toggle">
                 <i class="fa-regular fa-lightbulb"></i> Modo oscuro
               </li>
             </ul>
@@ -39,70 +40,90 @@
       ****************** SECTION  ***************************
       ****************************************************-->
         <section>
-          <div class="contenedor-de-section">
-            <p id="meme-img"></p>
-            <div id="imagen-de-meme"></div>
-            <p id="meme-img2"></p>
+          <div class="contenedor-de-section" >
+            <p id="text-meme">TOP TEXT</p>
+            <div id="div-img"></div>
+            <p id="text2-meme">BOTTOM TEXT</p>
           </div>
         </section>
 
-        <!-- ******************************************
+      <!-- ******************************************
       *********** BOTON DE DESCARGA *****************
-      ******************************************* -->
-        <div class="boton-de-descargar">
-          <p class="p-de-descarga">
+      ********************************************-->
+        <div class="btn-descarga">
+          <p class="contenedor-descarga">
             <i class="fa-solid fa-download"></i> Descargar meme
           </p>
         </div>
       </div>
 
-      <!-- **********************************************
-    ******************** ASIDE ************************
-    *********************************************** -->
-      <aside id="texto" class="aside-texto">
-        <div class="contenedor-de-aside">
-          <a class="cancelar" href="#">x</a>
-          <h2>TEXTO</h2>
+    <!-- *************************************************
+    ********************** ASIDE *************************
+    ***************************************************-->
+                        <!-- ASIDE DE TEXTO -->
+      <aside id="aside-text" class="aside-text">
+        <div class="contenedor-asideText">
+          <a id="cancelar" class="cancelar" href="#">x</a>
+          <h3>TEXTO</h3>
 
-          <div class="control">
+
+          <div class="panel-de-control">
             <label for="superior"><h4>SUPERIOR</h4></label>
-            <input id="superior" type="text" />
+            <input id="superior" type="text" value="TOP TEXT" />
             <div>
-              <input type="checkbox" name="" id="sin-texto-superior" />
-              <label for="sin-texto-superior">Sin texto Superior</label>
+              <input type="checkbox" id="sin-text-superior" />
+              <label for="sin-text-superior">Sin texto Superior</label>
             </div>
           </div>
 
-          <div class="control">
+
+          <div class="panel-de-control">
             <label for="inferior"><h4>INFERIOR</h4></label>
-            <input id="inferior" type="text" />
+            <input id="inferior" type="text" value="BOTTOM TEXT" />
             <div>
-              <input type="checkbox" name="" id="sin-texto-inferior" />
-              <label for="sin-texto-inferior">Sin texto inferior</label>
+              <input type="checkbox" name="" id="sin-text-inferior" />
+              <label for="sin-text-inferior">Sin texto inferior</label>
             </div>
           </div>
 
-          <div class="control">
+
+          <div class=" panel-de-control">
             <h4>FUENTE</h4>
-            <input id="fuente" type="text" />
+            <select name="Familia de fuente" id="fuente-text">
+              <option value="">Arial</option>
+              <option value="">Arial Black</option>
+              <option value="">American Typewriter</option>
+              <option value="">Andale Mono</option>
+              <option value="">Comic Sans MS</option>
+              <option value="Helvetica">Helvetica</option>
+              <option value="">Impact</option>
+              <option value="">Verdana</option>
+              <option value="">Times New Roman</option>
+            </select>
             <div>
-              <input id="font-size" type="text" />
-              <!-- cambiar a botones -->
-              <input id="izquierda" type="text" />
-              <input id="centro" type="text" />
-              <input type="text" name="" id="derecha">
+              <input id="font-size" type="number" value="25" />
+              <button id="" class="align"><i class="fa-solid fa-align-left"></i></button>
+              <button id="" class="align"><i class="fa-solid fa-align-center"></i></button>
+              <button id="" class="align"><i class="fa-solid fa-align-right"></i></button>
             </div>
           </div>
 
-          <div class="control">
+
+          <div class=" panel-de-control">
             <div class="contenedor-de-control">
-              <div class="contenedor-color-texto">
+              <div class="contenedor-color-text">
                 <h4>COLOR</h4>
-                <input type="text" name="" id="color" />
+                <div class="div-fondo-texto">
+                  <input type="color" name="" id="color" class="input-color"/>
+                  <span id="color-text">#000000</span>
+                </div>
               </div>
-              <div class="contenedor-fondo-texto">
+              <div class="contenedor-fondo-text">
                 <h4>FONDO</h4>
-                <input type="text" name="" id="fondo-texto" />
+                <div class="div-fondo-texto">
+                  <input type="color" name="" id="fondo-texto" class="input-color" />
+                  <span id="fondo-text">#FFFFF</span>
+                </div>
               </div>
             </div>
             <div>
@@ -111,93 +132,106 @@
             </div>
           </div>
 
-          <div class="control">
+
+          <div class="panel-de-control">
             <h4>CONTORNO</h4>
             <div>
-              <!-- cambiar a botones -->
-              <input type="text" name="" id="ninguno" />
-              <input type="text" id="claro"/>
-              <input type="text" name="" id="oscuro" />
+              <button class="contorno">NINGUNO</button>
+              <button class="contorno">CLARO</button>
+              <button class="contorno">OSCURO</button>
             </div>
           </div>
 
-          <div class="control">
+
+          <div class=" panel-de-control">
             <label for=""><h4>ESPACIDAD</h4></label>
-            <input type="text" name="" id="" />
+            <input type="number" name="" id=""  value="0"/>
           </div>
 
-          <div class="control">
+          <div class="panel-de-control">
             <label for=""><h4>INTERLINEADO</h4></label>
-            <input type="text" />
+            <input type="number" value="0" />
           </div>
         </div>
       </aside>
-      <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-      <!-- ASIDE DE IMAGEN -->
-      <aside id="imagen-aside" class="aside-imagen">
-        <div class="contenedor-aside-imagen">
-          <a class="cancelar" href="#">X</a>
-          <h2>IMAGEN</h2>
+      
+                                  <!-- ASIDE DE IMAGEN -->
+      <aside id="aside-img" class="aside-img">
+        <div class="contenedor-asideImg">
+          <a id="salir" class="cancelar" href="#">x</a>
+          <h3>IMAGEN</h3>
 
-          <div class="control">
+          <div class="panel-de-control">
             <label for="url">URL</label>
-            <input id="url" type="text" />
+            <input type="url" name="" id="url">
           </div>
 
-          <div class="control">
+          <div class="panel-de-control">
             <label for="fondo">FONDO</label>
-            <div class="contenedor-input-fondo">
-              <input id="fondo" type="text" />
-              <input type="text" name="" id="fondo2" />
+            <div class="div-input-fondo">
+              <div class="div-de-fondo">
+                <input class="input-color" type="color" name="" id="fondo-img">
+                <span id="span-fondo-img">#000000</span>
+              </div>
+              <div class="div-de-fondo">
+                <select name="" id="select-fondo">
+                  <option value="">Ninguna</option>
+                  <option value="">Aclarar</option>
+                  <option value="">Oscurecer</option>
+                  <option value="">Diferencia</option>
+                  <option value="">Luminosidad</option>
+                  <option value="">Multiplicar</option>
+                </select>
+              </div>
             </div>
           </div>
 
-          <div class="control">
+          <div class="panel-de-control">
             <h4>FILTROS</h4>
             <label for="brillo">BRILLO</label>
-            <input type="range" name="" id="brillo" min="0" max="1" />
+            <input type="range" name="" id="brillo" min="0" step="0.1" max="1"  class="filtro"/>
           </div>
 
-          <div class="control">
+          <div class="panel-de-control">
             <label for="opacidad">OPACIDAD</label>
-            <input type="range" name="" id="opacidad" min="0" max="1" />
+            <input type="range" name="" id="opacidad" min="0" step="0.1" max="1" class="filtro" />
           </div>
 
-          <div class="control">
+          <div class="panel-de-control">
             <label for="contraste">CONTRASTE</label>
-            <input type="range" name="" id="contraste" min="100" max="1000" />
+            <input type="range" name="" id="contraste" min="100" step="1" max="1000" class="filtro" />
           </div>
 
-          <div class="control">
+          <div class=" panel-de-control">
             <label for="desenfoque">DESENFOQUE</label>
-            <input type="range" name="" id="desenfoque" min="0" max="10" />
+            <input type="range" name="" id="desenfoque" min="0" step="0.1" max="10" class="filtro"/>
           </div>
 
-          <div class="control">
+          <div class="panel-de-control">
             <label for="grises">ESCALA DE GRISES</label>
-            <input type="range" name="" id="grises" min="0" max="100" />
+            <input type="range" name="" id="grises" min="0" step="1" max="100" class="filtro"/>
           </div>
 
-          <div class="control">
+          <div class="panel-de-control">
             <label for="sepia">SEPIA</label>
-            <input type="range" name="" id="sepia" min="0" max="100" />
+            <input type="range" name="" id="sepia" min="0" step="1" max="100" class="filtro"/>
           </div>
 
-          <div class="control">
+          <div class="panel-de-control">
             <label for="hue">HUE</label>
-            <input type="range" name="" id="hue" min="0" max="359" />
+            <input type="range" name="" id="hue" min="0" step="1" max="359" class="filtro"/>
           </div>
 
-          <div class="control">
+          <div class="panel-de-control">
             <label for="saturno">SATURNO</label>
-            <input type="range" name="" id="saturno" min="100" max="1000" />
+            <input type="range" name="" id="saturno" min="100" step="10" max="1000" class="filtro"/>
           </div>
 
-          <div class="control">
+          <div class="panel-de-control">
             <label for="negativo">NEGATIVO</label>
-            <input type="range" name="" id="negativo" min="0" max="1" />
+            <input type="range" name="" id="negativo" min="0" step="0.1" max="1" class="filtro"/>
           </div>
-          <div class="boton-restablecer">Reestablecer filtros</div>
+          <div id="btn-reestablecer" class="boton-reestablecer">Reestablecer filtros</div>
         </div>
       </aside>
     </div>
