@@ -6,6 +6,7 @@
 body{
     margin: 0;
     padding: 0;
+    
 }
 
 .contenedor-web{
@@ -14,11 +15,13 @@ body{
     background-color: rgb(237, 235, 235);
     color: rgb(44, 44, 44);
     height: 110vh;
+    width: 100%;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
 }
 
 .contenido-nav-section{
     width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -68,21 +71,20 @@ li:hover{
 
 section{
     width: 100%;
-    height: 600px;
+    height: 100vh;
     margin-top: 1%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.contenedor-de-section{
-    width: 100%;
-    max-width: 600px;
-    height: 100%;
-    background-color: black;
+.contenedor-de-meme{
+    width: 600px;
+    height: 600px;
 }
 
 #div-img{
+    width: 100%;
     height: 400px;
     background-color: black;
 }
@@ -101,9 +103,9 @@ height: 100%;
 width: 100%;
 }
 
-/* **************************************
-********* BOTON DE DESCARGA ************
-************************************** */
+/*-------------------------------------
+          BOTON DE DESCARGA 
+-------------------------------------*/
 .btn-descarga{
     width: 100%;
     display: flex;
@@ -131,17 +133,15 @@ width: 100%;
         ASIDE DE TEXTO
 ------------------------------*/
 .aside-text, .aside-img{
-    max-width: 280px ;
-    height:100vh;
+    width: 280px;
+    height:100%;
     background-color: rgb(230, 230, 230);
     position: fixed;
 }
 
 .contenedor-asideText, .contenedor-asideImg{
-    width: 100%;
-    max-width: 280px;
+    width: 90%;
     padding: 4%;
-    margin: 0 45px 0 0;
 }
 
 .cancelar{
@@ -161,7 +161,7 @@ h3{
     display: flex;
     flex-direction: column;
     padding: 1%;
-    max-width: 250px;
+    max-width: 100%;
 }
 
 label{
@@ -185,7 +185,7 @@ span{
 /*** FUENTES ***/
 .align{
     width: 21%;
-    height: 32px;
+    height: 33px;
     font-size: 16px;
     background-color: white;
     border: 1px solid rgb(107, 107, 107);
@@ -278,6 +278,7 @@ h4{
 /*** FILTROS ***/
 .filtro{
     padding: 0;
+    background-color: red;
 }
 
 .boton-reestablecer{
@@ -323,11 +324,84 @@ h4{
 }
 
 /*****************************************************
-*************** RESPOSIVE DE 400 PX ******************
+******************** RESPOSIVE ***********************
 *****************************************************/
-
-@media(min-width:400px){
+/*----------------------------
+   Media query de 700 px
+----------------------------*/
+@media (max-width: 700px){
+    section{
+        margin-top: 1.5%;
+    }
+    .contenedor-de-meme{
+        height: 520px;
+        width: 520px;
+    }
+    #div-img{
+        width: 100%;
+        height: 70%;
+    }
+    #text-meme, #text2-meme{
+        width: 100%;
+        height: 15%;
+    }
+    .btn-descarga{
+        margin-top: 1.5%;
+    }
+    .aside-text, .aside-img{
+        width: 100%;
+        overflow: auto;
+    }
+    .contenedor-asideText, .contenedor-asideImg{
+        margin: 0;
+        padding: 4%;
+    }
     
+}
+/* ---------------------------
+    Media query de 535 px 
+----------------------------*/
+@media(max-width:535px){
+    .contenedor-de-meme{
+        height: 450px;
+        width: 450px;
+    }
+    #text-meme, #text2-meme{
+        font-size: 30px;
+    }
+    h1{
+       font-size: 40px;
+    }
+}
+
+/*-------------------------------
+      Media query de 480 PX
+-------------------------------*/
+
+@media(max-width:480px){
+    .contenedor-de-meme{
+        width: 320px ;
+        height: 320px;
+    }
+    h1{
+        font-size: 30px;
+    }
+    li{
+        font-size: 16px;
+    }
+}
+
+@media(max-width:300px){
+    h1{
+       font-size:25px ; 
+    }
+    li{
+        font-size: 14px;
+    }
+    .contenedor-de-meme{
+        width: 250px;
+        height: 250px;
+    }
 }
 
 

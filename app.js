@@ -26,7 +26,7 @@ const asideImg = document.getElementById("aside-img") // aside img
 const inputImagen = document.getElementById("url") // input de url, para la img (aside img)
 const fondoImg = document.getElementById("fondo-img"); // input tipo color (aside img)
 const spanFondoImg = document.getElementById("span-fondo-img") // span de fondo de imagen (aside img)
-
+const selectFondo = document.getElementById("select-fondo") // selector de fondo de color (aside img)
 const rangoBrillo = document.getElementById("brillo") // input tipo rango del filtro brillo (aside img)
 const rangoOpacidad = document.getElementById("opacidad") // input tipo rango del filtro opacidad (aside img)
 const rangoContraste = document.getElementById("contraste") // input tipo rango del filtro contraste (aside img)
@@ -78,13 +78,6 @@ inputInferior.addEventListener( "input", (event) => {
     textImg2.innerHTML = textoIngresado
 })
 
-// --------------------------------------------
-    //  INPUT QUE PINTE EL VALUE EN EL SPAN
-// --------------------------------------------
-fondoImg.addEventListener( "input", (event) => {
-  const textoIngresado = event.target.value;
-  spanFondoImg.innerHTML = textoIngresado
-})
 
 // -------------------------------------------------------------
     // DIV QUE TOME EL VALUE DEL INPUT PARA PINTAR LA IMAGEN 
@@ -92,6 +85,14 @@ fondoImg.addEventListener( "input", (event) => {
 inputImagen.addEventListener( "input", (event) => {
     const srcIngresado = event.target.value;
     img.innerHTML = `<img src="${srcIngresado}"/>`
+})
+
+// ----------------------------------------------------------------
+    //  INPUT QUE PINTE EL VALUE EN EL SPAN Y FONDO DE LA IMAGEN
+// ---------------------------------------------------------------
+fondoImg.addEventListener( "input", (event) => {
+  spanFondoImg.innerHTML = event.target.value.toUpperCase()
+  img.style.backgroundColor = event.target.value
 })
 
 // -----------------------------------
@@ -103,12 +104,10 @@ rangoBrillo.addEventListener('input', (event) => {
     img.style.filter = `brightness(${valorActual})`
   })
 
- 
 rangoOpacidad.addEventListener('input', (event) => {
     const valorActual = event.target.value;
     img.style.filter = `opacity(${valorActual})`
   })
-
 
  rangoContraste.addEventListener('input', (event) => {
     const valorActual = event.target.value;
@@ -131,18 +130,15 @@ rangoSepia.addEventListener('input', (event) => {
     img.style.filter = `sepia(${valorActual}%)`
   })
 
-
 rangoHue.addEventListener('input', (event) => {
     const valorActual = event.target.value;
-    img.style.filter = `hue-rotation(${valorActual}deg)`
+    img.style.filter = `hue-rotate(${valorActual}deg)`
   })
-
 
 rangoSaturno.addEventListener('input', (event) => {
     const valorActual = event.target.value;
-    img.style.filter = `saturation(${valorActual}%)`
+    img.style.filter = `saturate(${valorActual}%)`
   })
-
 
  rangoNegativo.addEventListener('input', (event) => {
     const valorActual = event.target.value;
@@ -153,24 +149,24 @@ rangoSaturno.addEventListener('input', (event) => {
   // BOTON DE REESTABLECER TODOS LOS FILTROS   
 // ---------------------------------------------
 btnReestablecer.addEventListener("click", (event) => {
-  const brillo = rangoBrillo.value = 1
-  const opacidad = rangoOpacidad.value = 1
-  const contraste = rangoContraste.value = 100
-  const desenfoque = rangoDesenfoque.value = 0
-  const grises = escalasDeGrises.value = 0
-  const hue = rangoHue.value = 0
-  const sepia = rangoSepia.value =  0
-  const saturno = rangoSaturno.value = 0 
-  const negativo = rangoNegativo.value = 0
-  img.style.filter = `brightness(${brillo})` 
-  img.style.filter = `opacity(${opacidad})` 
-  img.style.filter =  `contrast(${contraste}%)` 
-  img.style.filter = `blur(${desenfoque}px) `
-  img.style.filter = `grayscale(${grises}%) `
-  img.style.filter = `hue-rotation(${hue}deg)`
-  img.style.filter = `sepia(${sepia}%)`
-  img.style.filter = `saturation(${saturno}%)`
-  img.style.filter = `invert(${negativo})`
+  const filtroBrillo = rangoBrillo.value = 1
+  const filtroOpacidad = rangoOpacidad.value = 1
+  const filtroContraste = rangoContraste.value = 100
+  const filtroDesenfoque = rangoDesenfoque.value = 0
+  const filtroGrises = escalasDeGrises.value = 0
+  const filtroHue = rangoHue.value = 0
+  const filtroSepia = rangoSepia.value =  0
+  const filtroSaturno = rangoSaturno.value = 0 
+  const filtroNegativo = rangoNegativo.value = 0
+  img.style.filter = `brightness(${filtroBrillo})` 
+  img.style.filter = `opacity(${filtroOpacidad})` 
+  img.style.filter =  `contrast(${filtroContraste}%)` 
+  img.style.filter = `blur(${filtroDesenfoque}px) `
+  img.style.filter = `grayscale(${filtroGrises}%) `
+  img.style.filter = `hue-rotate(${filtroHue}deg)`
+  img.style.filter = `sepia(${filtroSepia}%)`
+  img.style.filter = `saturate(${filtroSaturno}%)`
+  img.style.filter = `invert(${filtroNegativo})`
 })
 
 // ----------------------------------------------
