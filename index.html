@@ -90,21 +90,21 @@
           <div class=" panel-de-control">
             <h4>FUENTE</h4>
             <select name="Familia de fuente" id="fuente-text">
-              <option value="">Arial</option>
-              <option value="">Arial Black</option>
-              <option value="">American Typewriter</option>
-              <option value="">Andale Mono</option>
-              <option value="">Comic Sans MS</option>
+              <option value="Arial">Arial</option>
+              <option value="Arial Black">Arial Black</option>
+              <option value="American Typewriter">American Typewriter</option>
+              <option value="Andale Mono">Andale Mono</option>
+              <option value="Comic Sans MS">Comic Sans MS</option>
               <option value="Helvetica">Helvetica</option>
-              <option value="">Impact</option>
-              <option value="">Verdana</option>
-              <option value="">Times New Roman</option>
+              <option value="Impact">Impact</option>
+              <option value="Verdana">Verdana</option>
+              <option value="Times New Roman">Times New Roman</option>
             </select>
             <div>
               <input id="font-size" type="number" value="25" />
-              <button id="" class="align"><i class="fa-solid fa-align-left"></i></button>
-              <button id="" class="align"><i class="fa-solid fa-align-center"></i></button>
-              <button id="" class="align"><i class="fa-solid fa-align-right"></i></button>
+              <button id="align-left" class="align"><i class="fa-solid fa-align-left"></i></button>
+              <button id="align-center" class="align"><i class="fa-solid fa-align-center"></i></button>
+              <button id="align-right" class="align"><i class="fa-solid fa-align-right"></i></button>
             </div>
           </div>
 
@@ -114,20 +114,20 @@
               <div class="contenedor-color-text">
                 <h4>COLOR</h4>
                 <div class="div-fondo-texto">
-                  <input type="color" name="" id="color" class="input-color"/>
+                  <input type="color" name="" id="color-text-input" class="input-color"/>
                   <span id="color-text">#000000</span>
                 </div>
               </div>
               <div class="contenedor-fondo-text">
                 <h4>FONDO</h4>
                 <div class="div-fondo-texto">
-                  <input type="color" name="" id="fondo-texto" class="input-color" />
-                  <span id="fondo-text">#FFFFF</span>
+                  <input type="color" name="" id="fondo-text-input" class="input-color" value="#FFFFFF" />
+                  <span id="fondo-text">#FFFFFF</span>
                 </div>
               </div>
             </div>
             <div>
-              <input type="checkbox" name="" id="sin-fondo">
+              <input type="checkbox"  id="sin-fondo">
               <label for="sin-fondo">Fondo transparente</label>
             </div>
           </div>
@@ -136,9 +136,9 @@
           <div class="panel-de-control">
             <h4>CONTORNO</h4>
             <div>
-              <button class="contorno">NINGUNO</button>
-              <button class="contorno">CLARO</button>
-              <button class="contorno">OSCURO</button>
+              <button id="bnt-ninguno" class="contorno">NINGUNO</button>
+              <button id="bnt-claro" class="contorno">CLARO</button>
+              <button id="bnt-oscuro" class="contorno">OSCURO</button>
             </div>
           </div>
 

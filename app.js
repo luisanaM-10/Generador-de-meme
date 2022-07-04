@@ -5,6 +5,12 @@ const btnToggle = document.getElementById("btn-toggle") //Modo oscuro
 const btnCancelar = document.getElementById("cancelar") // btn de salir de aside text
 const btnSalir = document.getElementById("salir") // btn de salir de aside img
 const btnReestablecer = document.getElementById("btn-reestablecer") // btn de reestablecer filtros (aside img)
+const btnNoTextSup = document.getElementById("sin-text-superior") // btn sin texto superior(aside text)
+const btnNoTextInf = document.getElementById("sin-text-inferior") // btn sin texto inferior(aside text)
+const btnSinFondo = document.getElementById("sin-fondo") // input de sin fondo de texto (aside text)
+const btnNinguno = document.getElementById("bnt-ninguno") // btn de ninguno de contorno (aside text)
+const btnClaro = document.getElementById("bnt-claro") // btn de claro de contorno (aside text)
+const btnOscuro = document.getElementById("bnt-oscuro") // btn de oscuro de contorno (aside text)
 
 
                     // ELEMENTOS 
@@ -17,7 +23,13 @@ const textImg2 = document.getElementById("text2-meme") // etiqueta p que toma el
 const asideText = document.getElementById("aside-text") // aside text
 const inputSuperior = document.getElementById("superior") // input superior que pinta su value en la etiqueta p (aside text)
 const inputInferior = document.getElementById("inferior") // input inferior que pinta su value en la etiqueta p (aside tex)
-const fuenteText = document.getElementById("fuente-text") // font-family (aside text)
+const selectText = document.getElementById("fuente-text") // font-family (aside text)
+const fontSize = document.getElementById("font-size") // font-size (aside text)
+const alignCenter = document.getElementById("align-center") // align-center (aside text)
+const alignRight = document.getElementById("align-right") // align-right (aside text)
+const alignLeft = document.getElementById("align-left") // align-left (aside text)
+const inputColor = document.getElementById("color-text-input") // input de color para texto (aside text)
+const inputFondo = document.getElementById("fondo-text-input") // input de fondo para texto (aside text)
 const colorText = document.getElementById("color-text") // span de color de texto (aside text)
 const fondoText = document.getElementById("fondo-text") // span de fondo de texto (aside text)
 
@@ -78,6 +90,85 @@ inputInferior.addEventListener( "input", (event) => {
     textImg2.innerHTML = textoIngresado
 })
 
+// ------------------------------------
+// sin texto superior y inferior
+// ------------------------------------
+btnNoTextSup.addEventListener(`click`, () =>{textImg.classList.toggle("oculto");})
+btnNoTextInf.addEventListener(`click`, () =>{textImg2.classList.toggle("oculto");})
+
+// FUENTE (font-family)
+selectText.addEventListener("input", (event) =>{
+  const fuente = event.target.value
+  textImg.style.fontFamily = fuente
+  textImg2.style.fontFamily = fuente
+})
+
+
+// FUENTE (font-size)
+fontSize.addEventListener("input", (event) =>{
+  const tamanio = event.target.value
+  textImg.style.fontSize = `${tamanio}px`
+  textImg2.style.fontSize = `${tamanio}px`
+})
+
+// ALINEACION DE TEXTO
+
+alignCenter.addEventListener("click", (event) => { 
+  textImg.style.textAlign = "center"
+  textImg2.style.textAlign = "center"
+})
+alignRight.addEventListener("click", (event) => { 
+  textImg.style.textAlign = "right"
+  textImg2.style.textAlign = "right"
+})
+alignLeft.addEventListener("click", (event) => { 
+  textImg.style.textAlign = "left"
+  textImg2.style.textAlign = "left"
+})
+
+
+// COLOR DE TEXTO 
+inputColor.addEventListener( "input", (event) => {
+  colorText.innerHTML = event.target.value.toUpperCase()
+  textImg.style.color = event.target.value
+  textImg2.style.color = event.target.value
+})
+
+// FONDO DE TEXTO
+const actualiizarFondo =  (event) => {
+  if(btnSinFondo.checked){
+    textImg.style.backgroundColor = "transparent"
+    textImg2.style.backgroundColor = "transparent"
+  } else {
+    const color = inputFondo.value
+      fondoText.innerHTML = color.toUpperCase()
+      textImg.style.backgroundColor = color
+      textImg2.style.backgroundColor = color
+  }     
+}
+inputFondo.addEventListener("input", actualiizarFondo)
+btnSinFondo.addEventListener("click", actualiizarFondo)
+
+
+// CONTORNO
+
+// btnNinguno
+btnNinguno.addEventListener("click", (event) => {
+  textImg.style.textShadow = "none"
+  textImg2.style.textShadow = "none"
+})
+
+// btnClaro
+btnClaro.addEventListener("click", (event) => {
+  textImg.style.textShadow = "-2px 2px 2px #fff, 2px -2px 2px #fff, 2px 2px 2px #fff, -2px -2px #fff"
+  textImg2.style.textShadow = "-2px 2px 2px #fff, 2px -2px 2px #fff, 2px 2px 2px #fff, -2px -2px #fff"
+})
+
+// btnOscuro
+btnOscuro.addEventListener("click", (event) => {
+  textImg.style.textShadow = "-2px 2px 2px #000, 2px -2px 2px #000, 2px 2px 2px #000, -2px -2px #000"
+  textImg2.style.textShadow = "-2px 2px 2px #000, 2px -2px 2px #000, 2px 2px 2px #000, -2px -2px #000"
+})
 
 // -------------------------------------------------------------
     // DIV QUE TOME EL VALUE DEL INPUT PARA PINTAR LA IMAGEN 
