@@ -91,7 +91,7 @@
             <h4>FUENTE</h4>
             <select name="Familia de fuente" id="fuente-text">
               <option value="Arial">Arial</option>
-              <option value="Arial Black">Arial Black</option>
+              <option value="Arial Black" selected>Arial Black</option>
               <option value="American Typewriter">American Typewriter</option>
               <option value="Andale Mono">Andale Mono</option>
               <option value="Comic Sans MS">Comic Sans MS</option>
@@ -101,7 +101,7 @@
               <option value="Times New Roman">Times New Roman</option>
             </select>
             <div>
-              <input id="font-size" type="number" value="25" />
+              <input id="font-size" type="number" value="40" max="80" />
               <button id="align-left" class="align"><i class="fa-solid fa-align-left"></i></button>
               <button id="align-center" class="align"><i class="fa-solid fa-align-center"></i></button>
               <button id="align-right" class="align"><i class="fa-solid fa-align-right"></i></button>
@@ -145,12 +145,19 @@
 
           <div class=" panel-de-control">
             <label for=""><h4>ESPACIDAD</h4></label>
-            <input type="number" name="" id=""  value="0"/>
+            <input type="number" name="" max="50" id="padding-text"  value="21"/>
           </div>
 
           <div class="panel-de-control">
-            <label for=""><h4>INTERLINEADO</h4></label>
-            <input type="number" value="0" />
+            <h4>INTERLINEADO</h4>
+            <select name="" id="interlineado">
+              <option value="0.8">0.8</option>
+              <option value="1">1</option>
+              <option value="1.2" selected>1.2</option>
+              <option value="1.5">1.5</option>
+              <option value="2">2</option>
+              <option value="2.5">2.5</option>
+            </select>
           </div>
         </div>
       </aside>

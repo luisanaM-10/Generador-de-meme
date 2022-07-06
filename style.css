@@ -100,8 +100,10 @@ section{
     color: black;
     text-align: center;
     font-size: 40px ;
-    padding: 3% ;
+    padding: 21px ;
     font-weight: 700;
+    line-height: 1.2;
+    font-family: Arial black ;
 }
 
 #text2-meme{
@@ -212,8 +214,7 @@ select{
     padding: 1%;
     font-size: 18px;
     background-color: white;
-    background-color: transparent;
-    border: 0;
+    border: 1px solid rgb(107, 107, 107);
 }
 
 option{
@@ -289,6 +290,10 @@ h4{
     display: flex;
 }
 
+#select-fondo{
+    border: 0;
+    background-color: transparent;
+}
 /*** FILTROS ***/
 .filtro{
     padding: 0;
@@ -319,12 +324,12 @@ h4{
 
 /* header */
 .header-black{
-    background-color: rgb(16, 16, 37);
+    background-color: rgb(22, 22, 43);
 }
 
 /* aside */
 .aside-black{
-    background-color: rgb(20, 20, 50);
+    background-color: rgb(27, 27, 48);
 }
 
 /* fuente-text, aside de texto */

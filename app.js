@@ -32,7 +32,8 @@ const inputColor = document.getElementById("color-text-input") // input de color
 const inputFondo = document.getElementById("fondo-text-input") // input de fondo para texto (aside text)
 const colorText = document.getElementById("color-text") // span de color de texto (aside text)
 const fondoText = document.getElementById("fondo-text") // span de fondo de texto (aside text)
-
+const padding = document.getElementById("padding-text") // input de espacidad de tecto (aside text)
+const interlineado = document.getElementById("interlineado") // select de interlineado de texto (aside text)
 
 const asideImg = document.getElementById("aside-img") // aside img
 const inputImagen = document.getElementById("url") // input de url, para la img (aside img)
@@ -70,7 +71,7 @@ btnToggle.addEventListener("click", ()  => {
     header.classList.toggle("header-black")
     asideText.classList.toggle("aside-black")
     asideImg.classList.toggle("aside-black")
-    fuenteText.classList.toggle("fuente-text")
+    selectText.classList.toggle("fuente-text")
     colorText.classList.toggle("span-black")
     fondoText.classList.toggle("span-black")
     spanFondoImg.classList.toggle("span-black")
@@ -126,19 +127,24 @@ alignLeft.addEventListener("click", (event) => {
   textImg2.style.textAlign = "left"
 })
 
-
-// COLOR DE TEXTO 
+// ---------------------
+  // COLOR DE TEXTO 
+// ---------------------
 inputColor.addEventListener( "input", (event) => {
   colorText.innerHTML = event.target.value.toUpperCase()
   textImg.style.color = event.target.value
   textImg2.style.color = event.target.value
 })
 
+// --------------------
 // FONDO DE TEXTO
+// --------------------
 const actualiizarFondo =  (event) => {
   if(btnSinFondo.checked){
     textImg.style.backgroundColor = "transparent"
     textImg2.style.backgroundColor = "transparent"
+    textImg.style.position = "absolute"
+    textImg2.style.position = "absolute"
   } else {
     const color = inputFondo.value
       fondoText.innerHTML = color.toUpperCase()
@@ -149,9 +155,9 @@ const actualiizarFondo =  (event) => {
 inputFondo.addEventListener("input", actualiizarFondo)
 btnSinFondo.addEventListener("click", actualiizarFondo)
 
-
-// CONTORNO
-
+// -------------------
+    // CONTORNO
+// --------------------
 // btnNinguno
 btnNinguno.addEventListener("click", (event) => {
   textImg.style.textShadow = "none"
@@ -169,6 +175,28 @@ btnOscuro.addEventListener("click", (event) => {
   textImg.style.textShadow = "-2px 2px 2px #000, 2px -2px 2px #000, 2px 2px 2px #000, -2px -2px #000"
   textImg2.style.textShadow = "-2px 2px 2px #000, 2px -2px 2px #000, 2px 2px 2px #000, -2px -2px #000"
 })
+
+// ----------------
+    // ESPACIDAD
+// -----------------
+padding.addEventListener("input", (event) => {
+  const valor = padding.value
+  textImg.style.padding = `${valor}px 21px`
+  textImg2.style.padding = `${valor}px 21px`
+})
+
+// ---------------
+// interlineado
+// ---------------
+interlineado.addEventListener("input", (event) => {
+  const valor = interlineado.value
+  textImg.style.lineHeight = valor
+  textImg2.style.lineHeight = valor
+  
+})
+
+
+
 
 // -------------------------------------------------------------
     // DIV QUE TOME EL VALUE DEL INPUT PARA PINTAR LA IMAGEN 
