@@ -20,6 +20,7 @@ const textImg = document.getElementById("text-meme") // etiqueta p que toma el v
 const img = document.getElementById("div-img") // div contenedor de img
 const textImg2 = document.getElementById("text2-meme") // etiqueta p que toma el value de input inferior 
 
+
 const asideText = document.getElementById("aside-text") // aside text
 const inputSuperior = document.getElementById("superior") // input superior que pinta su value en la etiqueta p (aside text)
 const inputInferior = document.getElementById("inferior") // input inferior que pinta su value en la etiqueta p (aside tex)
@@ -32,7 +33,7 @@ const inputColor = document.getElementById("color-text-input") // input de color
 const inputFondo = document.getElementById("fondo-text-input") // input de fondo para texto (aside text)
 const colorText = document.getElementById("color-text") // span de color de texto (aside text)
 const fondoText = document.getElementById("fondo-text") // span de fondo de texto (aside text)
-const padding = document.getElementById("padding-text") // input de espacidad de tecto (aside text)
+const padding = document.getElementById("padding-text") // input de espaciado de texto (aside text)
 const interlineado = document.getElementById("interlineado") // select de interlineado de texto (aside text)
 
 const asideImg = document.getElementById("aside-img") // aside img
@@ -75,6 +76,9 @@ btnToggle.addEventListener("click", ()  => {
     colorText.classList.toggle("span-black")
     fondoText.classList.toggle("span-black")
     spanFondoImg.classList.toggle("span-black")
+    btnImagen.classList.toggle("letra-white")
+    btnTexto.classList.toggle("letra-white")
+    btnToggle.classList.toggle("letra-white")
 }) 
 
 // --------------------------------------------
@@ -177,12 +181,12 @@ btnOscuro.addEventListener("click", (event) => {
 })
 
 // ----------------
-    // ESPACIDAD
+    // ESPACIADO
 // -----------------
 padding.addEventListener("input", (event) => {
   const valor = padding.value
-  textImg.style.padding = `${valor}px 21px`
-  textImg2.style.padding = `${valor}px 21px`
+  textImg.style.padding = `${valor}% 2%`
+  textImg2.style.padding = `${valor}% 2%`
 })
 
 // ---------------
