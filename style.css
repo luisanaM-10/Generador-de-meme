@@ -305,7 +305,7 @@ option{
 /*** FILTROS ***/
 .filtro{
     padding: 0;
-    background-color: red;
+    height: 15px;
 }
 
 .boton-reestablecer{
@@ -328,13 +328,13 @@ option{
 
 /* contenedor-web */
 .web-black{
-    background-color: rgb(45, 41, 41);
+    background-color: rgb(49, 49, 59);
     color: white;
 }
 
 /* header */
 .header-black{
-    background-color: rgb(22, 22, 43);
+    background-color: rgb(29, 29, 46);
 }
 
 .letra-white{
@@ -343,7 +343,7 @@ option{
 
 /* aside */
 .aside-black{
-    background-color: rgb(27, 27, 48);
+    background-color: rgb(42, 42, 61);
 }
 
 /* fuente-text, aside de texto */
