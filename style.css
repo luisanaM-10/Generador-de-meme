@@ -125,7 +125,7 @@ width: 100%;
 /*-------------------------------------
           BOTON DE DESCARGA 
 -------------------------------------*/
-#btn-descargar{
+.btn-descargar{
     width: 170px;
     margin-top: 10px;
     font-size: 16px;
@@ -137,13 +137,60 @@ width: 100%;
     background-color: rgb(2, 96, 2);
 }
 
-#btn-descargar:hover{
+.btn-descargar:hover{
     background-color: rgb(6, 82, 3);
 }
 
 /******************************************
 ***************** ASIDE *******************
 ******************************************/
+
+/* ----------------------
+    ASIDE DE IMAGEN  
+-----------------------*/
+
+/*** FONDO ***/
+.div-de-fondo{
+    background-color: white;
+    display: flex;
+    border: 0.1px solid rgb(107, 107, 107);
+    padding: 1%;
+    font-weight: 900;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 1%;
+}
+
+.div-input-fondo{
+    display: flex;
+}
+
+#select-fondo{
+    font-size: 16px;
+    border: 0;
+    background-color: transparent;
+}
+/*** FILTROS ***/
+.filtro{
+    padding: 0;
+    height: 15px;
+}
+
+.boton-reestablecer{
+    background-color: rgb(80, 79, 99);
+    color: white;
+    padding: 3%;
+    margin: 2%;
+    width: 160px;
+    text-align: center;
+    border: 0;
+    font-size: 16px;
+}
+
+.boton-reestablecer:hover{
+    background-color: rgb(100, 99, 119);
+}
 
 /* -----------------------------
         ASIDE DE TEXTO
@@ -274,54 +321,6 @@ option{
     width: 27%;
     padding: 1%;
 }
-
-/* -------------------------------------------------- 
-                   ASIDE DE IMAGEN  
----------------------------------------------------*/
-
-
-/*** FONDO ***/
-.div-de-fondo{
-    background-color: white;
-    display: flex;
-    border: 0.1px solid rgb(107, 107, 107);
-    padding: 1%;
-    font-weight: 900;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    margin: 1%;
-}
-
-.div-input-fondo{
-    display: flex;
-}
-
-#select-fondo{
-    font-size: 16px;
-    border: 0;
-    background-color: transparent;
-}
-/*** FILTROS ***/
-.filtro{
-    padding: 0;
-    height: 15px;
-}
-
-.boton-reestablecer{
-    background-color: rgb(80, 79, 99);
-    color: white;
-    padding: 3%;
-    margin: 2%;
-    width: 160px;
-    text-align: center;
-    border: 0;
-    font-size: 16px;
-}
-
-.boton-reestablecer:hover{
-    background-color: rgb(100, 99, 119);
-}
 /* **********************************************
 **************** MODO OSCURO ********************* 
 ************************************************/
@@ -367,7 +366,7 @@ option{
         margin-top: 1.5%;
     }
     .contenedor-de-meme{
-        height: 520px;
+        height: 500px;
         width: 520px;
     }
     #div-img{
@@ -394,9 +393,9 @@ option{
 /* ---------------------------
     Media query de 535 px 
 ----------------------------*/
-@media(max-width:535px){
+@media(max-width:540px){
     .contenedor-de-meme{
-        height: 450px;
+        height: 420px;
         width: 450px;
     }
     #text-meme, #text2-meme{
@@ -414,7 +413,7 @@ option{
 @media(max-width:480px){
     .contenedor-de-meme{
         width: 320px ;
-        height: 320px;
+        height: 300px;
     }
     h1{
         font-size: 30px;
@@ -424,7 +423,10 @@ option{
     }
 }
 
-@media(max-width:300px){
+/*------------------------------
+      Media query de 340 px
+------------------------------*/
+@media(max-width:340px){
     h1{
        font-size:25px ; 
     }
@@ -432,11 +434,21 @@ option{
         font-size: 14px;
     }
     .contenedor-de-meme{
-        width: 250px;
-        height: 250px;
+        width: 300px;
+        height: 280px;
     }
     #text-meme, #text2-meme{
         font-size: 20px;
+    }
+}
+
+/*----------------------------
+      Media query 280 px
+----------------------------*/
+@media(max-width:280px){
+    .contenedor-de-meme{
+        width: 250px;
+        height: 240px;
     }
 }
 

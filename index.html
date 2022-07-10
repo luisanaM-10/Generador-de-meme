@@ -34,12 +34,12 @@
        ****************** SECTION  ***************************
        ****************************************************-->
         <section>
-          <div class="contenedor-de-meme">
+          <div class="contenedor-de-meme" id="canvas-meme">
             <p id="text-meme">TOP TEXT</p>
             <div id="div-img" aria-label="imagen de meme"></div>
             <p id="text2-meme">BOTTOM TEXT</p>
           </div>
-          <button aria-label="descargar meme" id="btn-descargar"><i class="fa-solid fa-download"></i> Descargar meme</button>
+          <button aria-label="descargar meme" class="btn-descargar" id="download-meme-button"><i class="fa-solid fa-download"></i> Descargar meme</button>
         </section>
       </div>
 
@@ -167,8 +167,8 @@
                 <span id="span-fondo-img" aria-hidden="true">#000000</span>
               </div>
               <div class="div-de-fondo">
-                <select name="" id="select-fondo" aria-label="modo de mezcla de fondo de imagen">
-                  <option value="unset">Ninguna</option>
+                <select id="select-fondo" aria-label="modo de mezcla de fondo de imagen">
+                  <option value="unset">Ninguno</option>
                   <option value="lighten">Aclarar</option>
                   <option value="darken">Oscurecer</option>
                   <option value="difference">Diferencia</option>
@@ -229,6 +229,8 @@
       </aside>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous"></script>
     <script src="app.js"></script>
   </body>
 </html>
