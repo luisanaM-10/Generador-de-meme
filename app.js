@@ -5,7 +5,7 @@ const btnToggle = document.getElementById("btn-toggle") //Modo oscuro
 const btnCancelar = document.getElementById("cancelar") // btn de salir de aside text
 const btnSalir = document.getElementById("salir") // btn de salir de aside img
 const btnDescarga = document.getElementById("download-meme-button") // btn de descargar meme
-const btnReestablecer = document.getElementById("btn-reestablecer") // btn de reestablecer filtros (aside img)
+const btnRestablecer = document.getElementById("btn-restablecer") // btn de restablecer filtros (aside img)
 const btnNoTextSup = document.getElementById("sin-text-superior") // btn sin texto superior(aside text)
 const btnNoTextInf = document.getElementById("sin-text-inferior") // btn sin texto inferior(aside text)
 const btnSinFondo = document.getElementById("sin-fondo") // input de sin fondo de texto (aside text)
@@ -93,7 +93,7 @@ btnDescarga.addEventListener("click", descargarMeme)
   // DIV QUE TOME EL VALUE DEL INPUT PARA PINTAR LA IMAGEN 
 inputImagen.addEventListener( "input", (event) => {
     const srcIngresado = event.target.value;
-    img.innerHTML = `<img src="${srcIngresado}" alt="url ingresada">`
+    img.style.backgroundImage = `url("${srcIngresado}")`
 })
 
   //  INPUT QUE PINTE EL VALUE EN EL SPAN Y FONDO DE LA IMAGEN
@@ -131,7 +131,7 @@ rangoSaturno.addEventListener('input', filtros)
 rangoNegativo.addEventListener('input', filtros)
 
   // BOTON DE REESTABLECER FILTROS   
-btnReestablecer.addEventListener("click", (event) => {
+btnRestablecer.addEventListener("click", (event) => {
   const filtroBrillo = rangoBrillo.value = 1
   const filtroOpacidad = rangoOpacidad.value = 1
   const filtroContraste = rangoContraste.value = 100
@@ -214,16 +214,16 @@ if(btnSinFondo.checked){
   textImg.style.position = 'absolute'
   textImg2.style.position = 'absolute'
 } else {
-  const valor = inputFondo.value
+  const color = inputFondo.value
     fondoText.innerHTML = color.toUpperCase()
-    textImg.style.backgroundColor = valor
-    textImg2.style.backgroundColor = valor
+    textImg.style.backgroundColor = color
+    textImg2.style.backgroundColor = color
     textImg.style.position = 'static'
   textImg2.style.position = 'static'
 }     
 }
 inputFondo.addEventListener("input", actualizarFondo)
-btnSinFondo.addEventListener("click",actualizarFondo)
+btnSinFondo.addEventListener("click", actualizarFondo)
 
   // CONTORNO
 btnNinguno.addEventListener("click", (event) => {

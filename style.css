@@ -6,7 +6,7 @@
 body{
     margin: 0;
     padding: 0;
-    height: 110vh;    
+    height: 120vh;
 }
 
 .contenedor-web{
@@ -83,7 +83,7 @@ section{
 .contenedor-de-meme{
     width: 100%;
     max-width: 600px;
-    height: 550px;
+    height: 580px;
     background-color: black;
     position: relative;
     display: flex;
@@ -95,7 +95,6 @@ section{
     flex-grow: 1;
     background-size: cover;
 }
-
 
 #text-meme , #text2-meme{
     background-color: white;
@@ -109,7 +108,6 @@ section{
     font-family: Arial black ;
 }
 
-
 #text-meme{
     top: 0;
 }
@@ -117,17 +115,12 @@ section{
     bottom: 0;
 }
 
-img{
-height: 100%;
-width: 100%;
-}
-
 /*-------------------------------------
           BOTON DE DESCARGA 
 -------------------------------------*/
 .btn-descargar{
     width: 170px;
-    margin-top: 10px;
+    margin-top: 1.5%;
     font-size: 16px;
     border: 0;
     padding: 8px;
@@ -144,7 +137,6 @@ width: 100%;
 /******************************************
 ***************** ASIDE *******************
 ******************************************/
-
 /* ----------------------
     ASIDE DE IMAGEN  
 -----------------------*/
@@ -177,7 +169,7 @@ width: 100%;
     height: 15px;
 }
 
-.boton-reestablecer{
+.boton-restablecer{
     background-color: rgb(80, 79, 99);
     color: white;
     padding: 3%;
@@ -188,7 +180,7 @@ width: 100%;
     font-size: 16px;
 }
 
-.boton-reestablecer:hover{
+.boton-restablecer:hover{
     background-color: rgb(100, 99, 119);
 }
 
@@ -358,42 +350,23 @@ option{
 /*****************************************************
 ******************** RESPOSIVE ***********************
 *****************************************************/
-/*----------------------------
-   Media query de 700 px
-----------------------------*/
+   /* Media query de 700 px */
 @media (max-width: 700px){
-    section{
-        margin-top: 1.5%;
-    }
     .contenedor-de-meme{
-        height: 500px;
+        height: 510px;
         width: 520px;
-    }
-    #div-img{
-        width: 100%;
-        height: 70%;
-    }
-    #text-meme, #text2-meme{
-        width: 96%;
-        height: 15%;
-    }
-    .btn-descarga{
-        margin-top: 1.5%;
     }
     .aside-text, .aside-img{
         width: 100%;
-        /* overflow: auto; */
     }
     .contenedor-asideText, .contenedor-asideImg{
         margin: 0;
         padding: 4%;
-    }
-    
+    } 
 }
-/* ---------------------------
-    Media query de 535 px 
-----------------------------*/
-@media(max-width:540px){
+
+    /* Media query de 545 px  */
+@media(max-width:545px){
     .contenedor-de-meme{
         height: 420px;
         width: 450px;
@@ -406,10 +379,7 @@ option{
     }
 }
 
-/*-------------------------------
-      Media query de 480 PX
--------------------------------*/
-
+    /* Media query de 480 PX */
 @media(max-width:480px){
     .contenedor-de-meme{
         width: 320px ;
@@ -418,39 +388,22 @@ option{
     h1{
         font-size: 30px;
     }
-    li{
-        font-size: 16px;
-    }
 }
 
-/*------------------------------
-      Media query de 340 px
-------------------------------*/
+    /* Media query de 340 px */
 @media(max-width:340px){
     h1{
        font-size:25px ; 
     }
-    li{
-        font-size: 14px;
-    }
     .contenedor-de-meme{
-        width: 300px;
-        height: 280px;
+        width: 250px;
+        height: 250px;
     }
     #text-meme, #text2-meme{
         font-size: 20px;
     }
 }
 
-/*----------------------------
-      Media query 280 px
-----------------------------*/
-@media(max-width:280px){
-    .contenedor-de-meme{
-        width: 250px;
-        height: 240px;
-    }
-}
 
 
 
