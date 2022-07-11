@@ -19,3 +19,5 @@ Segundo proyecto con Ada, Frontend.
 * Remover texto
 * Cambiar color de fondo de texto
 *	Entre otras funcionalidades para editar memes
+
+**IMPORTANTE: la url ingresada tiene que ser de una imagen gratis o sin derechos del autor, para poder descargar el meme**
